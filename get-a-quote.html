@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get a free painting quote from Stanley's Painting Services. Professional Gold Coast painters ready to transform your property.">
+  <meta name="keywords" content="painting quote Gold Coast, free painting estimate, Gold Coast painters quote">
+  <title>Get a Free Painting Quote | Stanley's Painting Services</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '977805120850078');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=977805120850078&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Avenir', Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+    }
+    
+    /* Header */
+    header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    
+    .logo img {
+      height: 60px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: #F69E3D;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #333;
+    }
+    
+    /* Page Content */
+    .quote-page {
+      background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+      min-height: calc(100vh - 200px);
+      padding: 60px 20px;
+    }
+    
+    .quote-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .quote-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .quote-header h1 {
+      font-size: 42px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    
+    .quote-header p {
+      font-size: 18px;
+      color: #666;
+    }
+    
+    /* Form Styles */
+    .form-step {
+      display: none;
+    }
+    
+    .form-step.active {
+      display: block;
+    }
+
+    .multi-step-form {
+      font-family: 'Poppins', sans-serif;
+      max-width: 500px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 15px;
+      background: #fff;
+      color: #000;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    .form-step label {
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input, button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-top: 15px;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 10px;
+      border: 2px solid #e0e0e0;
+      background: white;
+      color: black;
+      transition: all 0.3s;
+    }
+    
+    input:focus {
+      outline: none;
+      border-color: #F69E3D;
+      box-shadow: 0 0 0 3px rgba(246,158,61,0.1);
+    }
+
+    .select-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .select-option {
+      flex: 1 1 45%;
+      background: #f8f8f8;
+      padding: 18px;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 2px solid #e0e0e0;
+      color: #333;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .select-option:hover {
+      background: #fff;
+      border-color: #F69E3D;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(246,158,61,0.2);
+    }
+
+    .select-option.selected {
+      background: #F69E3D;
+      border-color: #F69E3D;
+      color: white;
+      font-weight: 600;
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(246,158,61,0.4);
+    }
+
+    button {
+      background: #F69E3D;
+      color: white;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    button:hover {
+      background: #d4881c;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(246,158,61,0.4);
+    }
+
+    .back-btn {
+      background: transparent;
+      border: 2px solid #F69E3D;
+      color: #F69E3D;
+      font-weight: 500;
+    }
+    
+    .back-btn:hover {
+      background: #F69E3D;
+      color: white;
+    }
+
+    #thankYouMessage {
+      text-align: center;
+      padding: 50px 30px;
+    }
+    
+    #thankYouMessage h3 {
+      font-size: 32px;
+      color: #F69E3D;
+      margin-bottom: 20px;
+    }
+    
+    #thankYouMessage p {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.8;
+    }
+    
+    /* Progress Indicator */
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: #e0e0e0;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #F69E3D 0%, #f5a623 100%);
+      transition: width 0.3s ease;
+      border-radius: 10px;
+    }
+    
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: white;
+      padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-logo img {
+      height: 80px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-section h4 {
+      color: #F69E3D;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-section a:hover {
+      color: #F69E3D;
+    }
+    
+    .reviews {
+      margin-top: 10px;
+      color: #FFD700;
+      font-size: 18px;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+    
+    .footer-bottom p {
+      margin-bottom: 5px;
+    }
+    
+    .footer-bottom a {
+      color: #F69E3D;
+      text-decoration: none;
+    }
+    
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      
+      nav ul.active {
+        display: flex;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .quote-header h1 {
+        font-size: 32px;
+      }
+      
+      .multi-step-form {
+        padding: 30px 20px;
+      }
+      
+      .select-option {
+        flex: 1 1 100%;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO.png" alt="Stanley's Painting Services Logo">
+        </a>
+      </div>
+      <nav>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="get-a-quote.html">Get a Quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Quote Page -->
+  <section class="quote-page">
+    <div class="quote-container">
+      <div class="quote-header">
+        <h1>Get a Free Painting Quote</h1>
+        <p>Tell us about your project and we'll provide you with a detailed quote</p>
+      </div>
+
+      <div class="multi-step-form">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width: 20%"></div>
+        </div>
+        
+        <form id="stanleyForm">
+          <div class="form-step active">
+            <label>What project are you looking to have completed?</label>
+            <div class="select-group" data-name="project_type">
+              <div class="select-option" data-value="Interior Painting">Interior Painting</div>
+              <div class="select-option" data-value="Exterior Painting">Exterior Painting</div>
+              <div class="select-option" data-value="Roof Painting">Roof Painting</div>
+              <div class="select-option" data-value="Other">Other</div>
+            </div>
+            <input type="hidden" name="project_type" required />
+            <button type="button" onclick="nextStep()">Next</button>
+          </div>
+
+          <div class="form-step">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Enter your full name" required />
+            <button type="button" class="back-btn" onclick="prevStep()">Back</button>
+            <button type="button" onclick="nextStep()">Next</button>
+          </div>
+
+          <div class="form-step">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="your@email.com" required />
+            <button type="button" class="back-btn" onclick="prevStep()">Back</button>
+            <button type="button" onclick="nextStep()">Next</button>
+          </div>
+
+          <div class="form-step">
+            <label>Phone Number</label>
+            <input type="text" name="phone" placeholder="0400 000 000" required />
+            <button type="button" class="back-btn" onclick="prevStep()">Back</button>
+            <button type="button" onclick="nextStep()">Next</button>
+          </div>
+
+          <div class="form-step">
+            <label>Property Address</label>
+            <input type="text" name="address" placeholder="123 Example Street, Gold Coast" required />
+            <button type="button" class="back-btn" onclick="prevStep()">Back</button>
+            <button type="submit">Submit Quote Request</button>
+          </div>
+        </form>
+
+        <div id="thankYouMessage" style="display:none;">
+          <h3>Thanks, you're all set! ✓</h3>
+          <p>Our team will be in touch shortly during business hours to discuss your painting project and provide you with a detailed quote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png" alt="Stanley's Painting Services">
+        <p>Gold Coast, QLD</p>
+        <div class="reviews">
+          ⭐⭐⭐⭐⭐ 5 Star Google Reviews<br>
+          ⭐⭐⭐⭐⭐ 5 Star Local Search Reviews
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="get-a-quote.html">Get a Quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Our Services</h4>
+        <ul>
+          <li>Interior Painting</li>
+          <li>Exterior Painting</li>
+          <li>Roof Painting</li>
+          <li>Driveway Painting</li>
+          <li>Residential & Commercial</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>📧 <a href="mailto:contact@stanleyspainting.com.au">contact@stanleyspainting.com.au</a></li>
+          <li>📞 <a href="tel:0406665708">0406 665 708</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stanley Painting Services PTY LTD. All rights reserved.</p>
+      <p>Website built by <a href="https://quoteleads.com.au" target="_blank">QuoteLeads</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+
+    const stanleyForm = document.getElementById("stanleyForm");
+    const stanleySteps = document.querySelectorAll(".form-step");
+    const progressFill = document.getElementById("progressFill");
+    let stanleyCurrentStep = 0;
+
+    function updateProgress() {
+      const progress = ((stanleyCurrentStep + 1) / stanleySteps.length) * 100;
+      progressFill.style.width = progress + '%';
+    }
+
+    function nextStep() {
+      if (stanleyCurrentStep < stanleySteps.length - 1) {
+        stanleySteps[stanleyCurrentStep].classList.remove("active");
+        stanleyCurrentStep++;
+        stanleySteps[stanleyCurrentStep].classList.add("active");
+        updateProgress();
+      }
+    }
+
+    function prevStep() {
+      if (stanleyCurrentStep > 0) {
+        stanleySteps[stanleyCurrentStep].classList.remove("active");
+        stanleyCurrentStep--;
+        stanleySteps[stanleyCurrentStep].classList.add("active");
+        updateProgress();
+      }
+    }
+
+    // Handle select options
+    document.querySelectorAll('.select-group').forEach(group => {
+      const name = group.dataset.name;
+      const hiddenInput = stanleyForm.querySelector(`input[name="${name}"]`);
+      group.querySelectorAll('.select-option').forEach(option => {
+        option.addEventListener('click', () => {
+          group.querySelectorAll('.select-option').forEach(opt => opt.classList.remove('selected'));
+          option.classList.add('selected');
+          if (hiddenInput) hiddenInput.value = option.dataset.value || option.textContent.trim();
+        });
+      });
+    });
+
+    // Submit
+    stanleyForm.addEventListener("submit", async (e)=>{
+      e.preventDefault();
+      const fd = new FormData(stanleyForm);
+      const data = {};
+      fd.forEach((v,k)=>data[k]=v);
+
+      await fetch("https://hook.eu2.make.com/qyw1mbj8a6lu42biv0t3cmjm1ey2vs6e",{
+        method:"POST",
+        headers:{ "Content-Type":"application/json" },
+        body:JSON.stringify(data)
+      });
+
+      // Fire Stanley's Painting Meta Pixel Lead Event
+      if (typeof fbq === "function") {
+        fbq('track', 'Lead');
+      }
+
+      stanleyForm.style.display = "none";
+      progressFill.parentElement.style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
+    });
+  </script>
+</body>
+</html>

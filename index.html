@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stanley's Painting Services - Gold Coast's trusted painting experts. Professional interior, exterior, roof, and driveway painting services across Gold Coast, QLD.">
+  <meta name="keywords" content="Gold Coast painters, painting services Gold Coast, interior painting, exterior painting, roof painting, residential painting, commercial painting">
+  <title>Gold Coast Painters You Can Trust | Stanley's Painting Services</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+  
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '977805120850078');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=977805120850078&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Avenir', Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+    }
+    
+    /* Header */
+    header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    
+    .logo img {
+      height: 60px;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: #F69E3D;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #333;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #F69E3D 0%, #f5a623 100%);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: #F69E3D;
+      padding: 15px 40px;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    /* Why Trust Us Section */
+    .why-trust {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    
+    .why-trust h2 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 50px;
+      color: #333;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .benefit-card {
+      text-align: center;
+      padding: 30px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .benefit-card h3 {
+      color: #F69E3D;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    
+    .benefit-card p {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    
+    /* Services Preview */
+    .services-preview {
+      background: #f5f5f5;
+      padding: 80px 20px;
+    }
+    
+    .services-preview h2 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 50px;
+      color: #333;
+    }
+    
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+    
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .service-card-content {
+      padding: 25px;
+      text-align: center;
+    }
+    
+    .service-card h3 {
+      color: #F69E3D;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      background: #F69E3D;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    
+    .cta-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    .cta-section p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    
+    .cta-white {
+      background: white;
+      color: #F69E3D;
+    }
+    
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: white;
+      padding: 40px 20px 20px;
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-logo img {
+      height: 80px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-section h4 {
+      color: #F69E3D;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-section a:hover {
+      color: #F69E3D;
+    }
+    
+    .reviews {
+      margin-top: 10px;
+      color: #FFD700;
+      font-size: 18px;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+    
+    .footer-bottom p {
+      margin-bottom: 5px;
+    }
+    
+    .footer-bottom a {
+      color: #F69E3D;
+      text-decoration: none;
+    }
+    
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      
+      nav ul.active {
+        display: flex;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero h1 {
+        font-size: 32px;
+      }
+      
+      .hero p {
+        font-size: 18px;
+      }
+      
+      .why-trust h2,
+      .services-preview h2 {
+        font-size: 32px;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO.png" alt="Stanley's Painting Services Logo">
+        </a>
+      </div>
+      <nav>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="get-a-quote.html">Get a Quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Gold Coast Painters You Can Trust</h1>
+    <p>Professional painting services for residential and commercial properties across the Gold Coast. Quality craftsmanship, reliable service, exceptional results.</p>
+    <a href="get-a-quote.html" class="cta-button">Get a Free Painting Quote Today!</a>
+  </section>
+
+  <!-- Why Trust Us Section -->
+  <section class="why-trust">
+    <h2>Why Trust Us?</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 18px;">
+      We believe that residential painting is an essential part of home maintenance and improvement, offering a range of benefits:
+    </p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3>Boosted Appeal</h3>
+        <p>Our high-quality paint job will enhance the exterior beauty of your home, making it stand out in your neighborhood.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Weather Protection</h3>
+        <p>Quality painting serves as a shield against the elements, safeguarding your home from weather-related damage and extending the life of your surfaces.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Increased Home Value</h3>
+        <p>A professionally painted home is more attractive to potential buyers, potentially increasing your property's market value.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Expression of Style</h3>
+        <p>Our painting services allow you to personalize your home, reflecting your unique taste and style.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="services-preview">
+    <h2>Our Painting Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/Exterior%201.png" alt="Exterior Painting Gold Coast">
+        <div class="service-card-content">
+          <h3>Exterior Painting</h3>
+          <p>Transform your home's curb appeal with professional exterior painting services.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/GOLDCOAST-ROOF-PAINTING.png" alt="Roof Painting Gold Coast">
+        <div class="service-card-content">
+          <h3>Roof Painting</h3>
+          <p>Protect and beautify your roof with our expert roof painting solutions.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/DRIVEWAY-PAINTING%201.png" alt="Driveway Painting Gold Coast">
+        <div class="service-card-content">
+          <h3>Driveway Painting</h3>
+          <p>Enhance your property's entrance with professional driveway painting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Ready to Transform Your Property?</h2>
+    <p>Get a free painting quote today and discover why Gold Coast homeowners trust Stanley's Painting Services.</p>
+    <a href="get-a-quote.html" class="cta-button cta-white">Get Your Free Quote</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png" alt="Stanley's Painting Services">
+        <p>Gold Coast, QLD</p>
+        <div class="reviews">
+          ⭐⭐⭐⭐⭐ 5 Star Google Reviews<br>
+          ⭐⭐⭐⭐⭐ 5 Star Local Search Reviews
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="get-a-quote.html">Get a Quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Our Services</h4>
+        <ul>
+          <li>Interior Painting</li>
+          <li>Exterior Painting</li>
+          <li>Roof Painting</li>
+          <li>Driveway Painting</li>
+          <li>Residential & Commercial</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>📧 <a href="mailto:contact@stanleyspainting.com.au">contact@stanleyspainting.com.au</a></li>
+          <li>📞 <a href="tel:0406665708">0406 665 708</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stanley Painting Services PTY LTD. All rights reserved.</p>
+      <p>Website built by <a href="https://quoteleads.com.au" target="_blank">QuoteLeads</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
